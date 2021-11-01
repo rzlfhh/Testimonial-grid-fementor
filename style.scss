@@ -1,0 +1,270 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: 400;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active,
+a:focus {
+    outline: none;
+}
+
+:root {
+
+    /* Reset 1rem */
+    font-size: 13px;
+
+    /* Basic colors */
+    --White: hsl(0, 0%, 100%);
+    --white-80: hsl(0, 0%, 100%, .8);
+    --black: #000000;
+
+    /* Project colors primary */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-grayish-blue-80: hsl(217, 19%, 35%, .8);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+
+    /* Project colors neutral */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    --alpha: 0.5;
+
+}
+
+/* Globals */
+
+body {
+    font-family: 'Barlow Semi Condensed',
+        sans-serif;
+    background: var(--Light-grayish-blue);
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: 500;
+}
+
+.c-1 {
+    background-color: var(--Moderate-violet);
+}
+
+.c-2 {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.c-3 {
+    background-color: var(--White);
+}
+
+.c-4 {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.c-5 {
+    background-color: var(--White);
+}
+
+.cards {
+    margin-bottom: 1.5em;
+    min-width: 337.5px;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 8px 8px 12px 0px rgba(202, 202, 202, 0.88);
+    -webkit-box-shadow: 8px 8px 12px 0px rgba(202, 202, 202, 0.88);
+    -moz-box-shadow: 8px 8px 12px 0px rgba(202, 202, 202, 0.88);
+
+    figure {
+        display: flex;
+        margin-bottom: 1.5em;
+        align-items: center;
+        gap: 1.5em;
+
+        img {
+            width: 3em;
+            border-radius: 50%
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+}
+
+.fc-white {
+    color: var(--White);
+}
+
+.fc-white-50 {
+    color: var(--white-80);
+}
+
+.fc-grey-blue {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.fc-grey-blue-80 {
+    color: var(--Very-dark-grayish-blue-80);
+}
+
+@media (min-width:801px) {
+    body {
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 2em;
+
+        .cards {
+            margin-bottom: 0;
+            min-width: 245.2px;
+        }
+
+        .c-1 {
+            grid-column: 1 / 3;
+        }
+
+        .c-3 {
+            grid-column: 1 / 2;
+        }
+
+        .c-4 {
+            grid-column: 2 / 4;
+        }
+
+        .c-5 {
+            grid-row: 1 / 3;
+            grid-column: 4 / 5;
+        }
+    }
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
